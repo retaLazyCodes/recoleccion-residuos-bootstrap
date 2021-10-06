@@ -19,10 +19,11 @@
     <nav id="sidebar" class="active">
 
       <!-- SideNav -->
-      <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+      <div class="img bg-wrap text-center py-4"
+        style="background-image: url(http://st.gde-fon.com/wallpapers_original/386775_banka_musor_listya_1920x1080_www.Gde-Fon.com.jpg);">
         <div class="user-logo">
           <div class="img" style="background-image: url(./images/avatar.jpeg);"></div>
-          <h3>User example </h3>
+          <h3>Cristian "GOD" Hernández</h3>
         </div>
       </div>
       <ul class="list-unstyled components mb-5">
@@ -42,7 +43,7 @@
           <a href="#"><span class="fa fa-address-book mr-3"></span>Ficha medica</a>
         </li>
         <li>
-          <a href="#" data-toggle="modal" data-target="#inboxModal"><span class="fa fa-envelope mr-3 notif"><small
+          <a href="./pages/inbox.html"><span class="fa fa-envelope mr-3 notif"><small
                 class="d-flex align-items-center justify-content-center">3</small></span>Mensajeria</a>
         </li>
         <li>
@@ -68,8 +69,9 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <input type="file" id="changeAvatar" style="display: none;">
           <div class="modalAvatar">
-            <img src="./images/avatar.jpeg" alt="hugenerd" class="rounded-circle ml-4">
+            <img src="./images/avatar.jpeg" alt="hugenerd" class="rounded-circle ml-4 accountModalAvatar">
             <span class="d-none d-sm-inline mx-1 font-italic">Cambiar foto de perfil</span>
           </div>
           <form>
@@ -77,31 +79,36 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Nombre</label>
-                  <input type="text" class="form-control" id="inputEmail4">
+                  <input type="text" class="form-control accountModalInput" id="inputEmail4" value="Cristian" disabled>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4">Apellido</label>
-                  <input type="text" class="form-control" id="inputPassword4">
+                  <input type="text" class="form-control accountModalInput" id="inputPassword4" value="Hernández"
+                    disabled>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <input type="email" class="form-control accountModalInput" id="inputEmail4"
+                    value="cristiangod@gmail.com" disabled>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4">Contraseña</label>
-                  <input type="password" class="form-control" id="inputPassword4">
+                  <input type="password" class="form-control accountModalInput" id="inputPassword4" value="123456789"
+                    disabled>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">DNI</label>
-                  <input type="number" class="form-control" id="inputEmail4">
+                  <input type="number" class="form-control accountModalInput" id="inputEmail4" value="31879345"
+                    disabled>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4">Telefono</label>
-                  <input type="tel" class="form-control" id="inputPassword4">
+                  <input type="tel" class="form-control accountModalInput" id="inputPassword4" value="1143576095"
+                    disabled>
                 </div>
               </div>
               <hr>
@@ -110,11 +117,11 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputCity">Calle</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input type="text" class="form-control accountModalInput" value="Calle falsa" id="inputCity" disabled>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputCity">Numero</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input type="text" class="form-control accountModalInput" value="123" id="inputCity" disabled>
                 </div>
 
               </div>
@@ -123,7 +130,7 @@
               <button type="submit" class="btn btn-primary"><span class="fa fa-save mr-3">
                 </span>Guardar
               </button>
-              <button type="submit" class="btn btn-dark">
+              <button type="button" class="btn btn-dark" id="editUserBtn">
                 <span class="fa fa-edit mr-3"></span>
                 Editar
               </button>
@@ -145,7 +152,7 @@
 
           <div class="modal-body">
             <button type="button" class="btn btn-info btn-lg btn-block">Reportar bug/problema</button>
-            <button type="button" id="weajajadejalo" class="btn btn-info btn-lg btn-block">Solicitar adelanto de
+            <button type="button" class="btn btn-info btn-lg btn-block">Solicitar adelanto de
               sueldo</button>
             <button type="button" class="btn btn-info btn-lg btn-block">Solicitar
               vacaciones
@@ -163,24 +170,6 @@
       </div>
     </div>
     <!-- Support modal end -->
-
-
-
-    <!-- Inbox Modal -->
-    <div class="modal fade" id="inboxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          ohhh nooo! Este modal no está hecho! 😱
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Inbox Modal END -->
-
-
 
 
 
@@ -217,7 +206,7 @@
                   medica</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Mensajeria</a>
+                <a class="nav-link" href="./pages/inbox.html">Mensajeria</a>
               </li>
             </ul>
           </div>
@@ -228,8 +217,8 @@
       <main role="main" class="container">
         <div class="d-flex align-items-center p-3 my-3 rounded shadow-sm navbar-light">
           <img src="./images/logo.png" alt="" width="60">
-          <div class="lh-1">
-            <h1 class="h6 mb-0 lh-1">PizarroResiduos</h1>
+          <div class="lh-1" style="line-height: normal;">
+            <h1 class="h6 mb-1 lh-1">PizarroResiduos</h1>
             <small class="font-italic">Desde 2001</small><br>
             <small class="font-italic">Creando una ciudad más verde</small>
           </div>
