@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Administracion de personal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/myStyles.css">
+</head>
+
+<body>
+
+  <!-- SideNav -->
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+
+      <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+        <div class="user-logo">
+          <div class="img" style="background-image: url(https://avatars.githubusercontent.com/u/98681?v=4);"></div>
+          <h3>User example </h3>
+        </div>
+      </div>
+      <ul class="list-unstyled components mb-5">
+        <li class="active">
+          <a href="#"><span class="fa fa-home mr-3"></span>
+            Home</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="modal" data-target="#accountModal"><span class="fa fa-user mr-3"></span> Mi
+            Cuenta</a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-id-card mr-3"><small
+                class="d-flex align-items-center justify-content-center"></small></span> Ficha empleado</a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-address-book mr-3"></span> Ficha medica</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="modal" data-target="#inboxModal"><span class="fa fa-envelope mr-3 notif"><small
+                class="d-flex align-items-center justify-content-center">5</small></span> Mensajeria</a>
+        </li>
+        <li>
+          <a href="#" data-toggle="modal" data-target="#supportModal"><span class="fa fa-support mr-3"></span>Soporte
+          </a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-sign-out mr-3"></span> Cerrar Sesion</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- Account Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title" id="exampleModalLabel">Mi Cuenta</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modalAvatar">
+            <img src="https://github.com/mdo.png" alt="hugenerd" class="rounded-circle ml-4">
+            <span class="d-none d-sm-inline mx-1 font-italic">Cambiar foto de perfil</span>
+          </div>
+          <form>
+            <div class="modal-body mx-3">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Nombre</label>
+                  <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Apellido</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Contraseña</label>
+                  <input type="password" class="form-control" id="inputPassword4">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">DNI</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Telefono</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <hr>
+              <p>Direccion</p>
+              <hr>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Calle</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCity">Numero</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer border-top-0 d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary"><span class="fa fa-save mr-3">
+                </span>Guardar
+              </button>
+              <button type="submit" class="btn btn-dark">
+                <span class="fa fa-edit mr-3"></span>
+                Editar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Account modal end -->
+
+
+    <!-- Support Modal -->
+    <div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">Soporte</div>
+
+          <div class="modal-body">
+            <button type="button" class="btn btn-info btn-lg btn-block">Reportar bug</button>
+            <button type="button" id="weajajadejalo" class="btn btn-info btn-lg btn-block">Pedir adentanto de
+              sueldo</button>
+            <button type="button" class="btn btn-info btn-lg btn-block">Pedir
+              vacaciones
+              <button type="button" class="btn btn-info btn-lg btn-block"><a href="#" data-toggle="modal"
+                  data-target="#inboxModal"></a> Otras
+                consultas</a></button>
+
+
+
+
+
+
+              <button type="button" class="btn btn-info btn-lg btn-block">Solicitud de baja</button>
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Support modal end -->
+
+
+
+    <!-- Inbox Modal -->
+    <div class="modal fade" id="inboxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          c viene el copy paste per
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Inbox Modal END -->
+
+
+
+
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">Mi Cuenta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ficha
+                  empleado</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ficha
+                  medica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mensajeria</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <main role="main" class="container">
+        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+          <img class="mr-3"
+            src="https://www.clipartmax.com/png/full/130-1303768_logo-imagen-de-papelera-de-reciclaje.png"" alt="" width="
+            48" height="48">
+          <div class="lh-100">
+            <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
+            <small>Since 2011</small>
+          </div>
+        </div>
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+          <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+          <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32"
+              class="mr-2 rounded" style="width: 32px; height: 32px;"
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb59%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb59%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">@username</strong> Donec id elit non mi porta gravida at eget
+              metus.
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+              risus.
+            </p>
+          </div>
+          <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&amp;bg=e83e8c&amp;fg=e83e8c&amp;size=1" alt="32x32"
+              class="mr-2 rounded"
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb62%20text%20%7B%20fill%3A%23e83e8c%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb62%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e83e8c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true" style="width: 32px; height: 32px;">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">@username</strong> Donec id elit non mi porta gravida at eget
+              metus.
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+              risus.
+            </p>
+          </div>
+          <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&amp;bg=6f42c1&amp;fg=6f42c1&amp;size=1" alt="32x32"
+              class="mr-2 rounded"
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb64%20text%20%7B%20fill%3A%236f42c1%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb64%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%236f42c1%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true" style="width: 32px; height: 32px;">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">@username</strong> Donec id elit non mi porta gravida at eget
+              metus.
+              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
+              risus.
+            </p>
+          </div>
+          <small class="d-block text-right mt-3">
+            <a href="#">All updates</a>
+          </small>
+        </div>
+
+      </main>
+
+
+    </div>
+
+    <!-- Page Content END -->
+
+  </div>
+
+
+  <script src="js/myScript.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

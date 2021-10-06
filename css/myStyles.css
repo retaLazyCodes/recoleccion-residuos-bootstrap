@@ -1,0 +1,16 @@
+/* un css mira nomas wey :coolpepe: */
+
+.modalAvatar img {
+    width: 20%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.modalAvatar img:hover {
+  transform: scale(1.1);
+}
+
+.form-control {
+      border: solid 1px gray;
+}
