@@ -1,5 +1,6 @@
 /* un css mira nomas wey :coolpepe: */
 
+
 .modalAvatar img {
     width: 20%;
     display: inline-block;
@@ -13,4 +14,9 @@
 
 .form-control {
       border: solid 1px gray;
+}
+
+
+.navbar-light {
+  background: #F1F1F8 !important;
 }

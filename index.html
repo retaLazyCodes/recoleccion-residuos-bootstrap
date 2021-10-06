@@ -14,13 +14,14 @@
 
 <body>
 
-  <!-- SideNav -->
   <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
 
+    <nav id="sidebar" class="active">
+
+      <!-- SideNav -->
       <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
         <div class="user-logo">
-          <div class="img" style="background-image: url(https://avatars.githubusercontent.com/u/98681?v=4);"></div>
+          <div class="img" style="background-image: url(./images/avatar.jpeg);"></div>
           <h3>User example </h3>
         </div>
       </div>
@@ -30,30 +31,31 @@
             Home</a>
         </li>
         <li>
-          <a href="#" data-toggle="modal" data-target="#accountModal"><span class="fa fa-user mr-3"></span> Mi
+          <a href="#" data-toggle="modal" data-target="#accountModal"><span class="fa fa-user mr-3"></span>Mi
             Cuenta</a>
         </li>
         <li>
           <a href="#"><span class="fa fa-id-card mr-3"><small
-                class="d-flex align-items-center justify-content-center"></small></span> Ficha empleado</a>
+                class="d-flex align-items-center justify-content-center"></small></span>Ficha empleado</a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-address-book mr-3"></span> Ficha medica</a>
+          <a href="#"><span class="fa fa-address-book mr-3"></span>Ficha medica</a>
         </li>
         <li>
           <a href="#" data-toggle="modal" data-target="#inboxModal"><span class="fa fa-envelope mr-3 notif"><small
-                class="d-flex align-items-center justify-content-center">5</small></span> Mensajeria</a>
+                class="d-flex align-items-center justify-content-center">3</small></span>Mensajeria</a>
         </li>
         <li>
           <a href="#" data-toggle="modal" data-target="#supportModal"><span class="fa fa-support mr-3"></span>Soporte
           </a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-sign-out mr-3"></span> Cerrar Sesion</a>
+          <a href="#"><span class="fa fa-sign-out mr-3"></span>Cerrar Sesion</a>
         </li>
       </ul>
 
     </nav>
+    <!-- SideNav END -->
 
     <!-- Account Modal -->
     <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -67,7 +69,7 @@
             </button>
           </div>
           <div class="modalAvatar">
-            <img src="https://github.com/mdo.png" alt="hugenerd" class="rounded-circle ml-4">
+            <img src="./images/avatar.jpeg" alt="hugenerd" class="rounded-circle ml-4">
             <span class="d-none d-sm-inline mx-1 font-italic">Cambiar foto de perfil</span>
           </div>
           <form>
@@ -75,11 +77,11 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Nombre</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <input type="text" class="form-control" id="inputEmail4">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4">Apellido</label>
-                  <input type="password" class="form-control" id="inputPassword4">
+                  <input type="text" class="form-control" id="inputPassword4">
                 </div>
               </div>
               <div class="form-row">
@@ -92,13 +94,15 @@
                   <input type="password" class="form-control" id="inputPassword4">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="inputAddress">DNI</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-              </div>
-              <div class="form-group">
-                <label for="inputAddress2">Telefono</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">DNI</label>
+                  <input type="number" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Telefono</label>
+                  <input type="tel" class="form-control" id="inputPassword4">
+                </div>
               </div>
               <hr>
               <p>Direccion</p>
@@ -140,19 +144,14 @@
           <div class="modal-header">Soporte</div>
 
           <div class="modal-body">
-            <button type="button" class="btn btn-info btn-lg btn-block">Reportar bug</button>
-            <button type="button" id="weajajadejalo" class="btn btn-info btn-lg btn-block">Pedir adentanto de
+            <button type="button" class="btn btn-info btn-lg btn-block">Reportar bug/problema</button>
+            <button type="button" id="weajajadejalo" class="btn btn-info btn-lg btn-block">Solicitar adelanto de
               sueldo</button>
-            <button type="button" class="btn btn-info btn-lg btn-block">Pedir
+            <button type="button" class="btn btn-info btn-lg btn-block">Solicitar
               vacaciones
               <button type="button" class="btn btn-info btn-lg btn-block"><a href="#" data-toggle="modal"
-                  data-target="#inboxModal"></a> Otras
+                  data-target="#inboxModal"></a>Otras
                 consultas</a></button>
-
-
-
-
-
 
               <button type="button" class="btn btn-info btn-lg btn-block">Solicitud de baja</button>
           </div>
@@ -189,12 +188,12 @@
 
 
     <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5">
+    <div id="content" class="p-md-3">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class=" container-fluid">
 
-          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <button type="button" id="sidebarCollapse" class="btn btn-dark">
             <i class="fa fa-bars"></i>
             <span class="sr-only">Toggle Menu</span>
           </button>
@@ -230,27 +229,26 @@
 
 
       <main role="main" class="container">
-        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
-          <img class="mr-3"
-            src="https://www.clipartmax.com/png/full/130-1303768_logo-imagen-de-papelera-de-reciclaje.png"" alt="" width="
-            48" height="48">
-          <div class="lh-100">
-            <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
-            <small>Since 2011</small>
+        <div class="d-flex align-items-center p-3 my-3 rounded shadow-sm navbar-light">
+          <img src="./images/logo.png" alt="" width="60">
+          <div class="lh-1">
+            <h1 class="h6 mb-0 lh-1">PizarroResiduos</h1>
+            <small class="font-italic">Desde 2001</small><br>
+            <small class="font-italic">Creando una ciudad más verde</small>
           </div>
         </div>
+
         <div class="my-3 p-3 bg-white rounded box-shadow">
-          <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+          <h6 class="border-bottom border-gray pb-2 mb-0">Últimas notificaciones</h6>
           <div class="media text-muted pt-3">
             <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32"
               class="mr-2 rounded" style="width: 32px; height: 32px;"
               src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb59%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb59%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
               data-holder-rendered="true">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong> Donec id elit non mi porta gravida at eget
-              metus.
-              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-              risus.
+              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum veniam est,
+              doloribus quasi. Quis, iusto?
             </p>
           </div>
           <div class="media text-muted pt-3">
@@ -259,10 +257,9 @@
               src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb62%20text%20%7B%20fill%3A%23e83e8c%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb62%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e83e8c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
               data-holder-rendered="true" style="width: 32px; height: 32px;">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong> Donec id elit non mi porta gravida at eget
-              metus.
-              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-              risus.
+              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum veniam est,
+              doloribus quasi. Quis, iusto?
             </p>
           </div>
           <div class="media text-muted pt-3">
@@ -271,19 +268,29 @@
               src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb64%20text%20%7B%20fill%3A%236f42c1%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb64%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%236f42c1%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
               data-holder-rendered="true" style="width: 32px; height: 32px;">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong> Donec id elit non mi porta gravida at eget
-              metus.
-              Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-              risus.
+              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum veniam est,
+              doloribus quasi. Quis, iusto?
             </p>
           </div>
           <small class="d-block text-right mt-3">
-            <a href="#">All updates</a>
+            <a href="#">Ver todas</a>
           </small>
         </div>
 
       </main>
 
+      <footer class="text-muted">
+        <div class="container">
+          <p class="float-right">
+            <a href="#">Volver arriba</a>
+          </p>
+          <div class="text-center pt-5">
+            PizarroResiduos © 2021 Todos los derechos reservados:
+            <a href="#"> PizarroResiduos.com</a>
+          </div>
+        </div>
+      </footer>
 
     </div>
 
@@ -292,11 +299,11 @@
   </div>
 
 
-  <script src="js/myScript.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/myScript.js"></script>
 </body>
 
 </html>
