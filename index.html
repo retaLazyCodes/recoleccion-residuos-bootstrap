@@ -12,6 +12,7 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/myStyles.css">
+  <link rel="stylesheet" href="css/chat.css">
 </head>
 
 <body>
@@ -52,8 +53,21 @@
           <a href="#"><span class="fa fa-cog mr-3"></span> Ajustes</a>
         </li>
         <li>
-          <a href="#" data-toggle="modal" data-target="#supportModal"><span class="fa fa-support mr-3"></span>Soporte
-          </a>
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Soporte</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="#">Reportar bug 1</a>
+            </li>
+            <li>
+              <a href="#">Pedir adelanto de sueldo </a>
+            </li>
+            <li>
+              <a href="#" data-toggle="modal" id="openConsult" data-target="#consult">Consulta</a>
+            </li>
+            <li>
+              <a href="#">Pedir vacaciones </a>
+            </li>
+          </ul>
         </li>
         <li>
           <a href="#"><span class="fa fa-sign-out mr-3"></span>Cerrar Sesion</a>
@@ -146,36 +160,53 @@
     </div>
     <!-- Account modal end -->
 
-
-    <!-- Support Modal -->
-    <div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">Soporte</div>
-
-          <div class="modal-body">
-            <button type="button" class="btn btn-info btn-lg btn-block">Reportar bug/problema</button>
-            <button type="button" class="btn btn-info btn-lg btn-block">Solicitar adelanto de
-              sueldo</button>
-            <button type="button" class="btn btn-info btn-lg btn-block">Solicitar
-              vacaciones
-              <button type="button" class="btn btn-info btn-lg btn-block"><a href="#" data-toggle="modal"
-                  data-target="#inboxModal"></a>Otras
-                consultas</a></button>
-
-              <button type="button" class="btn btn-info btn-lg btn-block">Solicitud de baja</button>
-          </div>
-          <div class="modal-footer">
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button> -->
+    <!-- Consult modal  -->
+    <div class="modal " id="consult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="consult2">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <div class="card">
+                <div class="card-header text-center">
+                  <span>Chat Box</span>
+                  <a href="#" id="closeChatLink"><span data-dismiss="modal"
+                      class="fa fa-2x fa-times-circle right"></span></a>
+                </div>
+                <div class="card-body chat-care">
+                  <ul class="chat">
+                    <li class="agent clearfix">
+                      <span class="chat-img left clearfix ">
+                        <img src="images/logo.png" alt="Agent" height="60x" width="60x" class="img-circle" />
+                      </span>
+                      <div class="chat-body clearfix">
+                        <div class="header clearfix">
+                          <strong class="primary-font">Pizarro</strong> <small class="right text-muted">
+                            <span class="glyphicon glyphicon-time"></span>1 seconds ago</small>
+                        </div>
+                        <p>
+                          Hola,¿en que podamos ayudarlo?
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <div class="input-group">
+                    <input id="btn-input" type="text" class="form-control input-sm"
+                      placeholder="Type your message here..." />
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" id="btn-chat">
+                        Enviar</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Support modal end -->
-
+    <!-- Consult modal end -->
 
 
     <!-- Page Content  -->
@@ -200,7 +231,8 @@
                 <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">Mi Cuenta</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#accountModal">Mi
+                  Cuenta</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Ficha
@@ -237,8 +269,11 @@
               src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb59%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb59%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
               data-holder-rendered="true">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum veniam est,
+              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet
+              consectetur,
+              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum
+              veniam
+              est,
               doloribus quasi. Quis, iusto?
             </p>
           </div>
@@ -248,8 +283,11 @@
               src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb62%20text%20%7B%20fill%3A%23e83e8c%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb62%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e83e8c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
               data-holder-rendered="true" style="width: 32px; height: 32px;">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum veniam est,
+              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet
+              consectetur,
+              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum
+              veniam
+              est,
               doloribus quasi. Quis, iusto?
             </p>
           </div>
@@ -259,8 +297,11 @@
               src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16e36b7cb64%20text%20%7B%20fill%3A%236f42c1%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16e36b7cb64%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%236f42c1%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.5390625%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
               data-holder-rendered="true" style="width: 32px; height: 32px;">
             <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet consectetur,
-              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum veniam est,
+              <strong class="d-block text-gray-dark">@username</strong> Lorem ipsum dolor sit amet
+              consectetur,
+              adipisicing elit. Ab cupiditate enim quae, provident, itaque minus natus odio vero harum
+              veniam
+              est,
               doloribus quasi. Quis, iusto?
             </p>
           </div>

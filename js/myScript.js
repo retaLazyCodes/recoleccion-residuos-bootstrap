@@ -25,3 +25,11 @@ editUserBtn.addEventListener('click', function () {
     accountModalAvatar.scrollIntoView()
     refs[0].focus()
 })
+
+
+
+// cerrar modal del chat
+$("#closeChatBtn").click(function () {
+    $('#consult').modal('hide')
+})
+
