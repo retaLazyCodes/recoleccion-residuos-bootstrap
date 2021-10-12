@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/myStyles.css">
   <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/employee.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@
             Cuenta</a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-id-card mr-3"><small
+          <a href="#" data-toggle="modal" data-target="#employeeModal"><span class="fa fa-id-card mr-3"><small
                 class="d-flex align-items-center justify-content-center"></small></span>Ficha empleado</a>
         </li>
         <li>
@@ -161,16 +162,20 @@
     <!-- Account modal end -->
 
     <!-- Consult modal  -->
-    <div class="modal " id="consult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal" id="consult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="consult2">
         <div class="modal-body">
           <div class="row">
             <div class="col-md-6 mx-auto">
               <div class="card">
-                <div class="card-header text-center">
-                  <span>Chat Box</span>
-                  <a href="#" id="closeChatLink"><span data-dismiss="modal"
-                      class="fa fa-2x fa-times-circle right"></span></a>
+                <div class="card-header text-center" style="display: inline-flex;">
+                  <div class=" col-sm-10 mx-auto">
+                    <span>Chat Box</span>
+                  </div>
+                  <span class="col-sm-2" style="margin-left: 5%;">
+                    <a href="#" id="closeChatLink"><span data-dismiss="modal"
+                        class="fa fa-2x fa-times-circle text-end"></span></a>
+                  </span>
                 </div>
                 <div class="card-body chat-care">
                   <ul class="chat">
@@ -209,6 +214,95 @@
     <!-- Consult modal end -->
 
 
+
+
+    <!-- employee file modal -->
+    <div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ficha de empleado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <form class="form-inline">
+                <div class="form-group mb-2">
+                  <label for="staticEmail2">Tu proxima quincena es en:</label>
+                  <input type="text" readonly class="form-control-plaintext text-sm-center" id="staticEmail2"
+                    value="6 día(s)" style="width: 40%; font-weight: 800;">
+                  <a href="#"><span class="fa fa-download" aria-hidden="true"></span> Bajar recibo de sueldo</a>
+                </div>
+                <div class="form-group mb-2">
+                  <label for="staticEmail3">Cargo:</label>
+                  <input type=" text" readonly class="form-control-plaintext text-sm-center ml-1" id="staticEmail3"
+                    value="Aguatero suplete 2°" style="width: 80%; font-weight: 800;">
+                </div>
+              </form>
+
+
+
+              <div class="table-responsive">
+                <table class="table table-bordered text-center">
+                  <thead>
+                    <tr class="bg-light-gray">
+                      <th class="text-uppercase">Lunes</th>
+                      <th class="text-uppercase">Martes</th>
+                      <th class="text-uppercase">Miercoles</th>
+                      <th class="text-uppercase">Jueves</th>
+                      <th class="text-uppercase">Viernes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span
+                          class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Jornada</span>
+                        <div class="margin-10px-top font-size14">13:00-20:00</div>
+                      </td>
+                      <td>
+                        <span
+                          class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Jornada</span>
+                        <div class="margin-10px-top font-size14">8:00-15:00</div>
+
+                      </td>
+
+                      <td>
+                        <span
+                          class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Jornada</span>
+                        <div class="margin-10px-top font-size14">13:00-20:00</div>
+                      </td>
+                      <td>
+                        <span
+                          class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Jornada</span>
+                        <div class="margin-10px-top font-size14">8:00-15:00</div>
+                      </td>
+                      <td>
+                        <span
+                          class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13">Jornada</span>
+                        <div class="margin-10px-top font-size14">8:00-15:00</div>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- employee file modal end -->
+
+
+
+
     <!-- Page Content  -->
     <div id="content" class="p-md-3">
 
@@ -235,7 +329,7 @@
                   Cuenta</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Ficha
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#employeeModal">Ficha
                   empleado</a>
               </li>
               <li class="nav-item">
