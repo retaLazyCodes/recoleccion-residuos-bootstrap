@@ -21,3 +21,6 @@
   background: #F1F1F8 !important;
 }
 
+.form-control textarea {
+  height: 50px !important;
+}

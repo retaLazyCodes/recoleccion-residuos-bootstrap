@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/myStyles.css">
   <link rel="stylesheet" href="css/chat.css">
   <link rel="stylesheet" href="css/employee.css">
+  <link rel="stylesheet" href="css/medicalModal.css">
 </head>
 
 <body>
@@ -44,7 +45,8 @@
                 class="d-flex align-items-center justify-content-center"></small></span>Ficha empleado</a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-address-book mr-3"></span>Ficha medica</a>
+          <a href="#" data-toggle="modal" data-target="#medicalModal"><span class="fa fa-address-book mr-3"></span>Ficha
+            medica</a>
         </li>
         <li>
           <a href="./pages/inbox.html"><span class="fa fa-envelope mr-3 notif"><small
@@ -57,7 +59,7 @@
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Soporte</a>
           <ul class="collapse list-unstyled" id="homeSubmenu">
             <li>
-              <a href="#">Reportar bug 1</a>
+              <a href="#">Reportar bug</a>
             </li>
             <li>
               <a href="#">Pedir adelanto de sueldo </a>
@@ -302,6 +304,42 @@
 
 
 
+    <!-- Medical Record modal -->
+    <div class="modal fade" id="medicalModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ficha médica</h5>
+          </div>
+          <div class="modal-body">
+            <span>Subir Autodiagnóstico</span>
+            <div class="file-loading">
+              <input id="input-b9" name="input-b9[]" multiple type="file">
+            </div>
+            <div id="kartik-file-errors"></div>
+            <span>Subite a p*to robot Shinji, no seas gei</span>
+            <div class="file-loading">
+              <input id="input-b8" name="input-b9[]" multiple type="file">
+            </div>
+            <div id="kartik-file-errors"></div>
+            <a href="/pages/license.html"><button type="button" class="btn btn-primary btn-lg"
+                style="margin-top: 10px;">Pedir
+                licencia</button></a>
+            <form>
+              <div class="form-group" style="margin-top: 25px;">
+                <label for="exampleFormControlTextarea1">Informar sintomas</label>
+                <textarea class="form-control" rows="6" style="resize: none; "></textarea>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Medical Record modal end -->
 
     <!-- Page Content  -->
     <div id="content" class="p-md-3">
@@ -461,6 +499,22 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/myScript.js"></script>
+  <script src="js/medicalModal.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#input-b9").fileinput({
+        showPreview: false,
+        showUpload: false,
+        elErrorContainer: ' #kartik-file-errors'
+      });
+    });
+    $(document).ready(function () {
+      $("#input-b8").fileinput({
+        showPreview: false,
+        showUpload: false,
+        elErrorContainer: ' #kartik-file-errors'
+      });
+    });</script>
 </body>
 
 </html>
